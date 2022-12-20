@@ -20,14 +20,14 @@ public class MainApp {
          String name = "name" + i;
          String lastName = "last_name" + i;
          String email = "email" + i;
-         User test_user = new User(name, lastName, email);
+         User user = new User(name, lastName, email);
 
          String model = "model" + i;
          String series = "series" + i;
-         Car test_car = new Car(model, series);
+         Car car = new Car(model, series);
 
-         test_user.setCar(test_car);
-         userService.add(test_user);
+         user.setCar(car);
+         userService.add(user);
       }
 
       List<User> users = userService.listUsers();

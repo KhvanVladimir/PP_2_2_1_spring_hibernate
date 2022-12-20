@@ -1,8 +1,14 @@
 package hiber.model;
 
-import org.hibernate.annotations.Cascade;
-
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Column;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.MapsId;
 
 @Entity
 @Table(name = "users")
@@ -23,7 +29,6 @@ public class User {
 
    @OneToOne
    @JoinColumn(name = "car_id")
-   //@Cascade(org.hibernate.annotations.CascadeType.ALL)
    @MapsId
    private Car car;
 
